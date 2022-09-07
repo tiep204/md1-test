@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> tính tuổi</title>
+</head>
+<!--Bài 1: Một gia đình có 3 bố con trong đó tuổi em kém tuổi anh 3 tuổi.-->
+<!--Tuổi của bố gấp 6 lần tuổi anh.-->
+<!--Viết chương trình nhập vào tuổi của em in ra tuổi của anh và tuổi của bố. (10đ)-->
+<h2> Nhập tuổi của em in ra tuổi của bố và của anh</h2>
+
+<input id="anvaoday" type="text" onclick="tinhTuoiRa()"> <label>hãy nhâp số tuổi của người em vao đây</label><br><br>
+<button onclick="tinhTuoi()">Tính Ngay</button>
+<p id="result">Ket qua: </p>
+<h1 id="hienthira"></h1>
+<h1 id="hienthira1"></h1>
+<h1 id="hienthira2"></h1>
+<h1 id="hienthira3"></h1>
+
+<body>
+<script>
+    function tinhTuoiRa() {
+        document.getElementById('hienthira').innerText = ""
+        document.getElementById('hienthira1').innerText = ""
+        document.getElementById('hienthira2').innerText = ""
+    }
+    function tinhTuoi() {
+        let tuoiem = +document.getElementById('anvaoday').value
+        let tuoianh = tuoiem + 3
+        let tuoibo = tuoianh * 6
+        if (tuoiem >= 0) {
+            document.getElementById('hienthira1').innerHTML = 'so tuoi cua anh la:' + tuoianh
+            document.getElementById('hienthira2').innerHTML = 'so tuoi cua bo la:' + tuoibo
+        } else if(tuoiem<0) {
+            document.getElementById('hienthira').innerHTML = 'có cả tuổi này sao:'
+        }else{
+            document.getElementById('hienthira3').innerHTML = 'sai quá sai!!!!'
+        }
+    }
+</script>
+
+</body>
+</html>

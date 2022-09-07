@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>trần dần ta đến đây</h1>
+<img id="banPhim" style="position: relative; top: 0px; left: 0px"
+src="https://znews-photo.zingcdn.me/w660/Uploaded/pwivovlb/2019_04_02/banh.jpg" height="250"><br>
+<img id="banphimmm" style="position: relative; top: 0px; left: +550px " src="https://thegioimay.org/wp-content/uploads/2020/11/meme-nha-tine-tri-tran-dan.jpg " height="300">
+
+
+<!--<button onclick="leftArrowPressed()"> sang trai</button>-->
+<!--<button onclick="rightArrowPressed()">sang phai</button>-->
+<!--<button onclick="upArrowPressed()">len tren</button>-->
+<!--<button onclick="downArrowPressed()">xuong duoi</button>-->
+<script>
+    let element = document.getElementById("banPhim");
+
+    function rightArrowPressed() {
+        element.style.left = parseInt(element.style.left) + 20 + 'px';
+    }
+
+    function leftArrowPressed() {
+        element.style.left = parseInt(element.style.left) - 20 + 'px';
+    }
+
+    function upArrowPressed() {
+        element.style.top = parseInt(element.style.top) - 20 + 'px';
+    }
+
+    function downArrowPressed() {
+        element.style.top = parseInt(element.style.top) + 20 + 'px';
+    }
+
+
+    function moveWithKeyboard(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 38:
+                upArrowPressed();
+                break;
+            case 40:
+                downArrowPressed();
+                break;
+        }
+    }
+
+    window.addEventListener('keydown', moveWithKeyboard);
+
+
+
+</script>
+</body>
+</html>
